@@ -1,5 +1,4 @@
 import './App.css'
-
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom';
@@ -24,7 +23,7 @@ function App() {
         <Route path='/resume-generator' element={<Resumegenerator/>}/>    
         <Route path='/history' element={<History/>}/>  
         <Route path='/form' element={<Form/>}/>
-        <Route path='/*' element={<Pagenotfound/>}/>     
+        <Route path='/*' element={<Pagenotfound/>}/>    
         </Routes>
         <Footer/>
     </>

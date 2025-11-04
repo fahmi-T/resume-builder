@@ -245,7 +245,7 @@ setUserInput({...userInput,skills:userInput.skills.filter(item=>item!=skill)})
           console.log(result);
           swal("success", "Resume Added", "success");
           setFinish(true)
-          setResumeId(result.data.id)
+          setResumeId(result?.data.id)
           
         }catch(err){
           console.log(err);
@@ -315,11 +315,10 @@ setUserInput({...userInput,skills:userInput.skills.filter(item=>item!=skill)})
                 Skip
               </Button>
             )}
-            
-            
-              {activeStep === steps.length - 1
-               ? <Button onclick={handleAddResume}>Finish</Button>:<Button onClick=
-               {handleNext}>Next</Button>
+            {
+              activeStep === steps.length - 1 ?
+              <Button onclick={handleAddResume}>Finish</Button>:<Button
+                onClick={handleNext}>Next</Button>
               }
           </Box>
         </React.Fragment>
